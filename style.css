@@ -1,5 +1,5 @@
 /* Basic Style */
-.body {
+.page {
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
@@ -12,11 +12,11 @@
   text-align: right;
 }
 
-.info-img {
+.info__img {
   width: 100%;
 }
 
-.info-more {
+.info__link {
   font-family: fantasy, cursive;
 }
 
@@ -32,14 +32,14 @@
   margin: 0 auto 0;
 }
 
-.task-label,
-.task-input {
+.todo__label,
+.todo__input {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
 }
 
-.task-row {
+.todo__row {
   display: flex;
 }
 
@@ -62,7 +62,7 @@ button {
   outline: none;
 }
 
-.button {
+.todo__button {
   background: none;
   border: 0px;
   color: #888;
@@ -72,12 +72,12 @@ button {
   cursor: pointer;
 }
 
-.button:hover {
+.todo__button:hover {
   color: #3a3a3a;
 }
 
 /* Heading */
-.heading {
+.todo__heading {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -87,7 +87,7 @@ button {
   text-transform: uppercase;
 }
 
-.task-input {
+.todo__input {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -100,12 +100,12 @@ button {
   color: #888;
 }
 
-.task-input:focus {
+.todo__input:focus {
   color: #333;
 }
 
 /* New Task */
-.heading[for="new-task"] {
+.todo__heading_add {
   display: block;
   margin: 0 0 20px;
 }
@@ -115,7 +115,7 @@ button {
 }
 
 /* Task list */
-.task {
+.todo__item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -125,51 +125,51 @@ button {
   align-items: center;
 }
 
-.task > * {
+.todo__item > * {
   vertical-align: middle;
 }
 
-.task-checkbox {
+.todo__checkbox {
   margin: 0 10px;
 }
 
-.task-label {
+.todo__label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-.task .task-input {
+.todo__item .todo__input {
   width: 226px;
 }
 
-.delete .delete-img {
+.todo__button_delete .todo__delete-img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-.delete .delete-img:hover {
+.todo__button_delete .todo__delete-img:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-#comp-tasks .task-label {
+#comp-tasks .todo__label {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-.task .task-input {
+.todo__item .todo__input {
   display: none;
 }
 
-.edit-mode .task-input {
+.todo__item_edit-mode .todo__input {
   display: inline-block;
   width: 224px;
 }
 
-.edit-mode .task-label {
+.todo__item_edit-mode .todo__label {
   display: none;
 }
